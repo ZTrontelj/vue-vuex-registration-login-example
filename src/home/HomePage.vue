@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Profile</a>
+                    <a class="nav-link js-scroll-trigger" href="#profile"><router-link to="/profile">Profile</router-link></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/login">Logout</router-link></a>
