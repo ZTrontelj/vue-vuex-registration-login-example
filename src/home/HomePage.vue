@@ -22,8 +22,20 @@
             </div>
             </div>
         </nav>
+        <div class="row" style="margin-top: 20%;">
+            <div class="col-md-12">
+                <div class="well">
+                    <form>
+                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-primary" style="width: 25%; float: left;">Bread</button>
+                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-danger" style="width: 25%; float: left;">Eggs</button>
+                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-info" style="width: 25%; float: left;">Chicken</button>
+                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-success" style="width: 25%; float: left;">Pasta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         
-        <div class="row" style="margin-top: 30%;">
+        <div class="row" style="margin-top: 5%;">
             <div class="col-md-12">
                 <div class="well">
                     <form>
@@ -41,7 +53,7 @@
                     <li v-for="(todo, index) in todos" :key="index" class="list-group-item text-primary">
                         {{ todo }}
 
-                        <button type="button" v-on:click="removeElement(todo, index)" class="btn btn-outline-primary btn-sm" style="float: right">Remove</button>
+                        <button type="button" v-on:click="removeElement(todo, index)" class="btn btn-outline-danger btn-sm" style="float: right">Remove</button>
                     
                     </li>
                 </ul>
@@ -49,12 +61,12 @@
         </div>
         <form class="form-inline" style="float: right; margin-bottom: 20%; margin-top: 10%;">
           <div class="form-group">
-            <label class="sr-only" for="exampleInputAmount">Amount (in euros)</label>
+            <label class="sr-only" for="exampleInputAmount">Price (in euros)</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">€</span>
               </div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Price">
             </div>
           </div>
         </form>
@@ -90,6 +102,9 @@ export default {
             this.todos.push(this.input);
             this.input = "";
         } ,
+        addOften() {
+            this.todos.push(this.common);
+        },
         removeElement(todo, index) {
             this.$delete(this.todos, index);
         }
