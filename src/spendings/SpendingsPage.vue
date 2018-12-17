@@ -13,7 +13,7 @@
                     <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/home">Home</router-link></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/spendings">Expenses</router-link></a>
+                    <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/profile">Profile</router-link></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/login">Logout</router-link></a>
@@ -27,16 +27,14 @@
             <div class="col-md-12">
                 <div class="well">
                     <div class="card">
-                      <img src="src/img/profile1.jpg" alt="John" style="width:100%">
-                      <h1>{{account.user.firstName}} {{account.user.lastName}}</h1>
-                      <p class="title">CEO & Founder</p>
-                      <p>Coimbra University</p>
+                      <img src="src/img/graph1.jpg" alt="Spendings" style="width:100%">
                     </div> 
                 </div>
             </div>
         </div>
     
     </div>
+
 </template>
 
 <script>
@@ -50,6 +48,7 @@ export default {
         })
     }
 };
+
 </script>
 
 <style>

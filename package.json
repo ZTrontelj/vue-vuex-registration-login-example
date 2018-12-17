@@ -10,8 +10,14 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
+    "chart.js": "^2.7.3",
+    "chartkick": "^3.0.1",
+    "hchs-vue-charts": "^1.2.8",
+    "mdbvue": "^4.9.0",
     "vee-validate": "^2.1.0-beta.6",
     "vue": "^2.5.16",
+    "vue-chartjs": "^3.4.0",
+    "vue-chartkick": "^0.5.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -26,7 +32,7 @@
     "path": "^0.12.7",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.15.0",
+    "webpack": "^4.27.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.10"
   }
