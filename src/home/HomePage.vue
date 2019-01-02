@@ -26,10 +26,10 @@
             <div class="col-md-12">
                 <div class="well">
                     <form>
-                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-primary" style="width: 25%; float: left;">Bread</button>
-                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-danger" style="width: 25%; float: left;">Eggs</button>
-                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-info" style="width: 25%; float: left;">Chicken</button>
-                        <button type="button" v-model="common" v-on:click="addOften()" class="btn btn-outline-success" style="width: 25%; float: left;">Pasta</button>
+                        <button type="button" v-model="common" v-on:click="addBread()" class="btn btn-outline-success" style="width: 25%; float: left;">Bread</button>
+                        <button type="button" v-model="common" v-on:click="addEggs()" class="btn btn-outline-success" style="width: 25%; float: left;">Eggs</button>
+                        <button type="button" v-model="common" v-on:click="addCheese()" class="btn btn-outline-success" style="width: 25%; float: left;">Cheese</button>
+                        <button type="button" v-model="common" v-on:click="addPasta()" class="btn btn-outline-success" style="width: 25%; float: left;">Pasta</button>
                     </form>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="well">
                     <form>
                         <div class="form-group text-success" style="float: left; width: 75%;">
-                            <input type="text" v-model="input" class="form-control" id="todoitem" placeholder="Item name" />
+                            <input type="text" v-model="input" class="form-control" id="todoitem" placeholder="Write product name and click add" />
                         </div>
                         <button type="button" v-on:click="add()" class="btn btn-outline-primary" style="width: 25%;">Add</button>
                     </form>
@@ -50,26 +50,30 @@
         <div class="row" style="margin-top: 30px;">
             <div class="col-md-12">
                 <ul class="list-group">
-                    <li v-for="(todo, index) in todos" :key="index" class="list-group-item text-primary">
+                    <li v-for="(todo, index) in todos" :key="index" class="list-group-item">
                         {{ todo }}
 
-                        <button type="button" v-on:click="removeElement(todo, index)" class="btn btn-outline-danger btn-sm" style="float: right">Remove</button>
+                        <button type="button" v-on:click="removeElement(todo, index)" class="btn btn-outline-danger btn-sm" style="float: right">Remove item</button>
                     
                     </li>
                 </ul>
             </div>
         </div>
-        <form class="form-inline" style="float: right; margin-bottom: 20%; margin-top: 10%;">
+
+        <form class="form-inline" style="float: center; margin-top: 10%;">
           <div class="form-group">
             <label class="sr-only" for="exampleInputAmount">Price (in euros)</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">€</span>
               </div>
-              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Price">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="Input price after purchase to track expenses">
             </div>
           </div>
         </form>
+        
+        <p class="text-success" style="margin-bottom: 20%; float: center;">Price will be used to track expenses</p>
+        
     </div>
 </template>
 
@@ -102,8 +106,17 @@ export default {
             this.todos.push(this.input);
             this.input = "";
         } ,
-        addOften() {
-            this.todos.push(this.common);
+        addBread() {
+            this.todos.push("Bread");
+        },
+        addEggs() {
+            this.todos.push("Eggs");
+        },
+        addCheese() {
+            this.todos.push("Cheese");
+        },
+        addPasta() {
+            this.todos.push("Pasta");
         },
         removeElement(todo, index) {
             this.$delete(this.todos, index);
