@@ -1,5 +1,24 @@
 <template>
     <div>
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Please help us with your feedback:)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfL8jGM-Svab7sg3bFZ4PlcAPnFxVCTgowMJiDeDwrprjAEkA/viewform?embedded=true" width="100%" height="1214" frameborder="0" marginheight="0" marginwidth="0">Nalaganje ...</iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><router-link to="/login">Logout</router-link></button>
+            </div>
+            </div>
+        </div>
+        </div>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
             <div class="container">
@@ -16,7 +35,7 @@
                     <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/spendings">Expenses</router-link></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services"><router-link to="/login">Logout</router-link></a>
+                    <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#exampleModalLong" >Logout</a>
                 </li>
                 </ul>
             </div>
