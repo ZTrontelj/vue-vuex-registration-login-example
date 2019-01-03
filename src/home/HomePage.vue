@@ -14,15 +14,38 @@
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfL8jGM-Svab7sg3bFZ4PlcAPnFxVCTgowMJiDeDwrprjAEkA/viewform?embedded=true" width="100%" height="1214" frameborder="0" marginheight="0" marginwidth="0">Nalaganje ...</iframe>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"><router-link to="/login">Logout</router-link></button>
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal"><router-link to="/login">Logout</router-link></button>
             </div>
             </div>
         </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Shopping list was sent to provided email adress!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
             <div class="container">
-            <a class="navbar-brand js-scroll-trigger text-primary" href="#page-top">Listy shopping</a>
+            <a class="navbar-brand js-scroll-trigger text-primary" href="#page-top">
+                <img src="src/img/transparent.png" height="30" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,6 +64,26 @@
             </div>
             </div>
         </nav>
+
+        
+
+         <div class="row" style="margin-top: 100px  ;">
+             
+            <div class="col-md-12">
+                <p class="text-success" style="float: center;">Send a shopping list</p>
+                <div class="well">
+                    <form>
+                        <div class="form-group text-success" style="float: left; width: 75%;">
+                            <input type="text" class="form-control" id="todoitem" placeholder="Email" />
+                        </div>
+                        <button type="button" class="btn btn-outline-primary" style="width: 25%;" data-toggle="modal" data-target="#exampleModal">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+        
         <div class="row" style="margin-top: 20%;">
             <div class="col-md-12">
                 <div class="well">
@@ -54,6 +97,7 @@
             </div>
         </div>
         
+
         <div class="row" style="margin-top: 5%;">
             <div class="col-md-12">
                 <div class="well">

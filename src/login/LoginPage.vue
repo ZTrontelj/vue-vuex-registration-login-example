@@ -1,10 +1,7 @@
 <template>
     <div id="outer-login" class="text-primary">
-        <div id="title-login">
-            <h4>Welcome</h4>
-            <h4>to</h4>
-            <h4>LISTY SHOPPING</h4>
-        </div>
+        <img src="src/img/transparent.png" alt="Spendings" style="width: 50%;margin-top: 70px;margin-bottom: 70px;">
+        
         
         <form @submit.prevent="handleSubmit">
             <div class="form-group">
