@@ -12,6 +12,7 @@
   "dependencies": {
     "chart.js": "^2.7.3",
     "chartkick": "^3.0.1",
+    "express": "^4.16.4",
     "hchs-vue-charts": "^1.2.8",
     "mdbvue": "^4.9.0",
     "vee-validate": "^2.1.0-beta.6",
